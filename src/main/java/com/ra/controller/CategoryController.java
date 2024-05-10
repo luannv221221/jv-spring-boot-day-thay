@@ -42,4 +42,9 @@ public class CategoryController {
         categoryService.saveOrUpdate(category);
         return "redirect:/category";
     }
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Long id){
+        categoryService.delete(id);
+        return "redirect:/category";
+    }
 }

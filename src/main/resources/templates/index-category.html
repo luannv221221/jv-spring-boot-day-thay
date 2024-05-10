@@ -15,7 +15,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <h1>Danh sách danh mục</h1>
                 <table class="table">
                     <thead>
@@ -36,6 +36,7 @@
                         <td th:text="${category.status ? 'Hien' : 'An'}"></td>
                         <td>
                             <a class="btn btn-primary" th:href="@{'/category/edit/'+${category.categoryId}}">Edit</a>
+                            <a class="btn btn-danger" onclick="return confirm('Chắc chắn chứ')" th:href="@{'/category/delete/'+${category.categoryId}}">Delete</a>
                         </td>
                     </tr>
                     </tbody>
